@@ -1,0 +1,9 @@
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\bin\Debug\netcoreapp2.1\EfCommands.deps.json
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\bin\Debug\netcoreapp2.1\EfCommands.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\bin\Debug\netcoreapp2.1\EfCommands.pdb
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\obj\Debug\netcoreapp2.1\EfCommands.csprojAssemblyReference.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\obj\Debug\netcoreapp2.1\EfCommands.csproj.CoreCompileInputs.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\obj\Debug\netcoreapp2.1\EfCommands.AssemblyInfoInputs.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\obj\Debug\netcoreapp2.1\EfCommands.AssemblyInfo.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\obj\Debug\netcoreapp2.1\EfCommands.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\EfCommands\obj\Debug\netcoreapp2.1\EfCommands.pdb

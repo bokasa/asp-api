@@ -1,0 +1,9 @@
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\bin\Debug\netcoreapp2.1\Application.deps.json
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\bin\Debug\netcoreapp2.1\Application.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\bin\Debug\netcoreapp2.1\Application.pdb
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\obj\Debug\netcoreapp2.1\Application.csprojAssemblyReference.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\obj\Debug\netcoreapp2.1\Application.csproj.CoreCompileInputs.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\obj\Debug\netcoreapp2.1\Application.AssemblyInfoInputs.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\obj\Debug\netcoreapp2.1\Application.AssemblyInfo.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\obj\Debug\netcoreapp2.1\Application.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\Application\obj\Debug\netcoreapp2.1\Application.pdb

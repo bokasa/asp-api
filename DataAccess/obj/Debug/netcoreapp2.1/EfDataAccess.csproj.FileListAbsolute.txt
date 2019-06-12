@@ -6,3 +6,9 @@ C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreap
 C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.AssemblyInfo.cs
 C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.runtimeconfig.json
 C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.runtimeconfig.dev.json
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.pdb
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\Domain.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.csproj.CopyComplete
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.pdb
