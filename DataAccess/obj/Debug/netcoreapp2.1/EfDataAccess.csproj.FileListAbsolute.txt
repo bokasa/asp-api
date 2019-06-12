@@ -1,0 +1,8 @@
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.deps.json
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.dll
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.csprojAssemblyReference.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.AssemblyInfoInputs.cache
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\obj\Debug\netcoreapp2.1\EfDataAccess.AssemblyInfo.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.runtimeconfig.json
+C:\Users\milos.ruzic\source\repos\asp-api-project\DataAccess\bin\Debug\netcoreapp2.1\EfDataAccess.runtimeconfig.dev.json
