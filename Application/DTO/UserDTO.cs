@@ -8,7 +8,7 @@ namespace Application.DTO
     {
         public string Name { get; set; }
         public string Email { get; set; }
-        public ICollection<DTOComment> Comments { get; set; }
-        public ICollection<DTOAd> Ads { get; set; }
+        public ICollection<CommentDTO> Comments { get; set; }
+        public ICollection<AdDTO> Ads { get; set; }
     }
 }
