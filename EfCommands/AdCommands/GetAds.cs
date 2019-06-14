@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Application.DTO;
+using Application.ICommands;
 using Application.Queries;
 using EfDataAccess;
 
 namespace EfCommands.AdCommands
 {
-    public class GetAds : BaseCommand
+    public class GetAds : BaseCommand, IGetAdsCommand
     {
         public GetAds(Context context) : base(context)
         {

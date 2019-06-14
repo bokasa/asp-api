@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.ICommands;
+using Application.Queries;
+using EfDataAccess;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,13 +12,26 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController1 : Controller
+    [ApiController]
+    public class AdsController : Controller
     {
+
+        private readonly Context _context;
+        private IGetAdsCommand _getCommand;
+        private IGetAdCommand _getOneCommand;
+
+        public AdsController(Context context, IGetAdsCommand getCommand, IGetAdCommand getOneCommand)
+        {
+            _context = context;
+            _getCommand = getCommand;
+            _getOneCommand = getOneCommand;
+        }
+
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get([FromQuery] AdQuery query)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_getCommand.Execute(query));
         }
 
         // GET api/<controller>/5
