@@ -10,5 +10,6 @@ namespace Application.DTO
         public string Email { get; set; }
         public ICollection<CommentDTO> Comments { get; set; }
         public ICollection<AdDTO> Ads { get; set; }
+   
     }
 }

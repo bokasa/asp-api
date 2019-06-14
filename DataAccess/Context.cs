@@ -14,11 +14,10 @@ namespace EfDataAccess
         public DbSet<Ad> Ads { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=ads;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=apiapi;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
