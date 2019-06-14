@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Exceptions;
 using Application.ICommands;
 using Application.Queries;
 using EfDataAccess;
@@ -36,9 +37,18 @@ namespace Api.Controllers
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            try
+            {
+                var adDto = _getOneCommand.Execute(id);
+                return Ok(adDto);
+            }
+            catch (EntityNotFoundException)
+            {
+
+                return NotFound();
+            }
         }
 
         // POST api/<controller>
