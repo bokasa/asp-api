@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.DTO;
 using Application.Exceptions;
 using Application.ICommands;
 using Application.Queries;
+using Domain;
 using EfDataAccess;
 using Microsoft.AspNetCore.Mvc;
 
@@ -42,6 +44,7 @@ namespace Api.Controllers
             try
             {
                 var adDto = _getOneCommand.Execute(id);
+                
                 return Ok(adDto);
             }
             catch (EntityNotFoundException)
@@ -53,8 +56,35 @@ namespace Api.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]AdDTO dto)
         {
+            var ad = new Ad
+            {
+                Title = dto.Title,
+                Body = dto.Body,
+                Price = dto.Price,
+                IsShipping = dto.IsShipping
+            };
+
+            _context.Ads.Add(ad);
+
+            try
+            {
+                _context.SaveChanges();
+
+                return Created("/api/ads/" + ad.Id, new AdDTO
+                {
+                    Id = ad.Id,
+                    Title = ad.Title,
+                    Body = ad.Body,
+                    Price = ad.Price,
+                    IsShipping = ad.IsShipping
+                });
+            }
+            catch
+            {
+                return StatusCode(500, "An error has occured !!");
+            }
         }
 
         // PUT api/<controller>/5
