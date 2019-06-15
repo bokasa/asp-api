@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.ICommands;
+using Application.ICommands.Category;
+using EfCommands.CategoryCommands;
+using EfDataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +37,10 @@ namespace Web
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<Context>();
+            services.AddTransient<IGetCategoriesCommand, GetCategories>();
+            services.AddTransient<IGetCategoryCommand, GetCategory>();
+            services.AddTransient<IAddCategoryCommand, AddCategory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

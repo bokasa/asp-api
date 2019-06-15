@@ -7,7 +7,8 @@ using System.Text;
 
 namespace Application.ICommands.Category
 {
-    public interface IGetGetCommentsCommand : ICommand<CategoryQuery, IEnumerable<CategoryDTO>>
+    public interface IGetCategoriesCommand : ICommand<CategoryQuery, IEnumerable<CategoryDTO>>
     {
+
     }
 }

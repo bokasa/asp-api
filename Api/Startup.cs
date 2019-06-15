@@ -36,7 +36,7 @@ namespace Api
             services.AddDbContext<Context>();
             services.AddTransient<IGetAdsCommand, GetAds>();
             services.AddTransient<IGetUsersCommand, GetUsers>();
-            services.AddTransient<IGetGetCommentsCommand, GetCategories>();
+            services.AddTransient<IGetCategoriesCommand, GetCategories>();
             services.AddTransient<IGetCommentsCommand, GetComments>();
             services.AddTransient<IGetAdCommand, GetAd>();
             services.AddTransient<IGetUserCommand, GetUser>();

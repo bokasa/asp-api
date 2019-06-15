@@ -9,7 +9,7 @@ using EfDataAccess;
 
 namespace EfCommands.CategoryCommands
 {
-    public class GetCategories : BaseCommand, IGetGetCommentsCommand
+    public class GetCategories : BaseCommand, IGetCategoriesCommand
     {
         public GetCategories(Context context) : base(context)
         {
@@ -30,6 +30,7 @@ namespace EfCommands.CategoryCommands
 
             return query.Select(c => new CategoryDTO
             {
+                Id = c.Id,
                 Name = c.Name,
                 Ads = c.Ads.Select(a => new AdDTO
                 {
