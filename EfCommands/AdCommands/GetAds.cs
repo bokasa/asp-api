@@ -46,6 +46,7 @@ namespace EfCommands.AdCommands
 
             return query.Select(s => new AdDTO
             {
+                Id = s.Id,
                 Title = s.Title,
                 Body = s.Body,
                 Price = s.Price,

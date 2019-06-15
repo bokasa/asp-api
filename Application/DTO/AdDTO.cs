@@ -1,4 +1,6 @@
-﻿namespace Application.DTO
+﻿using Domain;
+
+namespace Application.DTO
 {
     public class AdDTO
     {
@@ -7,6 +9,8 @@
         public string Body { get; set; }
         public int Price { get; set; }
         public bool IsShipping { get; set; }
+
+        public CategoryDTO Category { get; set; }
 
     }
 }

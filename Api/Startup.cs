@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.ICommands;
+using Application.ICommands.Category;
+using Application.ICommands.Comment;
 using EfCommands.AdCommands;
+using EfCommands.CategoryCommands;
+using EfCommands.CommentCommands;
 using EfDataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +35,13 @@ namespace Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<Context>();
             services.AddTransient<IGetAdsCommand, GetAds>();
+            services.AddTransient<IGetUsersCommand, GetUsers>();
+            services.AddTransient<IGetGetCommentsCommand, GetCategories>();
+            services.AddTransient<IGetCommentsCommand, GetComments>();
             services.AddTransient<IGetAdCommand, GetAd>();
+            services.AddTransient<IGetUserCommand, GetUser>();
+            services.AddTransient<IGetCategoryCommand, GetCategory>();
+            services.AddTransient<IGetCommentCommand, GetComment>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

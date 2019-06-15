@@ -7,10 +7,10 @@ namespace Application.DTO
     public class UserDTO
     {
         public int Id { get; set; } 
-        public string Name { get; set; }
+        public string Username { get; set; }
         public string Email { get; set; }
-        public ICollection<CommentDTO> Comments { get; set; }
-        public ICollection<AdDTO> Ads { get; set; }
+        public IEnumerable<CommentDTO> Comments { get; set; }
+        public IEnumerable<AdDTO> Ads { get; set; }
    
     }
 }

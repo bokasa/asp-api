@@ -8,7 +8,7 @@ namespace Application.DTO
     {
         public int Id { get; set; } 
         public string Name { get; set; }
-        public ICollection<AdDTO> Categories { get; set; }
+        public IEnumerable<AdDTO> Ads { get; set; }
 
     }
 }

@@ -55,37 +55,11 @@ namespace Api.Controllers
         }
 
         // POST api/<controller>
-        [HttpPost]
-        public IActionResult Post([FromBody]AdDTO dto)
-        {
-            var ad = new Ad
-            {
-                Title = dto.Title,
-                Body = dto.Body,
-                Price = dto.Price,
-                IsShipping = dto.IsShipping
-            };
-
-            _context.Ads.Add(ad);
-
-            try
-            {
-                _context.SaveChanges();
-
-                return Created("/api/ads/" + ad.Id, new AdDTO
-                {
-                    Id = ad.Id,
-                    Title = ad.Title,
-                    Body = ad.Body,
-                    Price = ad.Price,
-                    IsShipping = ad.IsShipping
-                });
-            }
-            catch
-            {
-                return StatusCode(500, "An error has occured !!");
-            }
-        }
+        //[HttpPost]
+        //public IActionResult Post(AdDTO dto)
+        //{
+          
+        //}
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]

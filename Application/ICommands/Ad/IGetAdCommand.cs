@@ -8,5 +8,6 @@ namespace Application.ICommands
 {
     public interface IGetAdCommand : ICommand<int, AdDTO>
     {
+
     }
 }
