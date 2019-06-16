@@ -14,10 +14,10 @@ namespace Web.Controllers
     public class CategoryController : Controller
     {
         private readonly IGetCategoriesCommand _getCommand;
-        private readonly IGetCategoryCommand _getOneCommand;
-        private readonly IAddCategoryCommand _addCommand;
-        private readonly IDeleteCategoryCommand _deleteCategoryCommand;
-        private readonly IEditCategoryCommand _editCategoryCommand;
+        private IGetCategoryCommand _getOneCommand;
+        private IAddCategoryCommand _addCommand;
+        private IDeleteCategoryCommand _deleteCategoryCommand;
+        private IEditCategoryCommand _editCategoryCommand;
 
         public CategoryController(IGetCategoriesCommand getCommand, IGetCategoryCommand getOneCommand, IAddCategoryCommand addCommand, IDeleteCategoryCommand deleteCategoryCommand, IEditCategoryCommand editCategoryCommand)
         {

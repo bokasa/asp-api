@@ -15,10 +15,10 @@ namespace Web.Controllers
     public class UserController : Controller
     {
         private readonly IGetUsersCommand _getCommand;
-        private readonly IGetUserCommand _getOneCommand;
-        private readonly ICreateUserCommand _createUserCommand;
-        private readonly IEditUserCommand _editUserCommand;
-        private readonly IDeleteUserCommand _deleteUserCommand;
+        private IGetUserCommand _getOneCommand;
+        private ICreateUserCommand _createUserCommand;
+        private IEditUserCommand _editUserCommand;
+        private IDeleteUserCommand _deleteUserCommand;
 
         public UserController(IGetUsersCommand getCommand, IGetUserCommand getOneCommand, ICreateUserCommand createUserCommand, IEditUserCommand editUserCommand, IDeleteUserCommand deleteUserCommand)
         {

@@ -42,6 +42,8 @@ namespace Api
             services.AddTransient<IGetUserCommand, GetUser>();
             services.AddTransient<IGetCategoryCommand, GetCategory>();
             services.AddTransient<IGetCommentCommand, GetComment>();
+            services.AddTransient<ICreateAdCommand, CreateAd>();
+            services.AddTransient<IDeleteAdCommand, DeleteAd>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

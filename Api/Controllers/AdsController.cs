@@ -54,23 +54,98 @@ namespace Api.Controllers
             }
         }
 
-        // POST api/<controller>
-        //[HttpPost]
-        //public IActionResult Post(AdDTO dto)
-        //{
-          
-        //}
+        [HttpPost]
+        public IActionResult Post([FromQuery] AdDTO ad)
+        {
+            var ads = new Ad
+            {
+                Title = ad.Title,
+                Body = ad.Body,
+                Price = ad.Price,
+                IsShipping = ad.IsShipping
+            };
+
+            _context.Ads.Add(ads);
+
+            try
+            {
+                _context.SaveChanges();
+
+                return Created("/api/ads/" + ads.Id, new AdDTO
+                {
+                    Id = ads.Id,
+                    Title = ad.Title,
+                    Body = ad.Body,
+                    Price = ad.Price,
+                    IsShipping = ad.IsShipping
+                });
+            }
+            catch
+            {
+                return StatusCode(500, "An error has occured.");
+            }
+        }
+
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put(int id, [FromQuery] AdDTO ad)
         {
+            var ads = _context.Ads.Find(id);
+
+            if (ads == null)
+            {
+                return NotFound();
+            }
+
+            if (ads.IsDeleted)
+            {
+                return NotFound();
+            }
+
+            ads.Title = ad.Title;
+            ads.Body = ad.Body;
+            ads.Price = ad.Price;
+            ads.IsShipping = ad.IsShipping;
+
+            try
+            {
+                _context.SaveChanges();
+                return NoContent();
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(500, "An error has occured.");
+            }
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var ad = _context.Ads.Find(id);
+
+            if (ad == null)
+            {
+                return NotFound();
+            }
+
+            if (ad.IsDeleted)
+                return Conflict("This ad is already deleted.");
+
+            ad.IsDeleted = true;
+
+            try
+            {
+                _context.SaveChanges();
+                return NoContent();
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(500);
+            }
         }
     }
 }

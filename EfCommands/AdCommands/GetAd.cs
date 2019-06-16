@@ -37,7 +37,7 @@ namespace EfCommands
                 Body = ad.Body,
                 Price = ad.Price,
                 IsShipping = ad.IsShipping,
-                CategoryId = ad.Category.Id,
+                CategoryId = ad.CategoryId,
                 UserId = ad.User.Id
             };
         }
