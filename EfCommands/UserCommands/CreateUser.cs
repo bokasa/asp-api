@@ -19,12 +19,12 @@ namespace EfCommands.UserCommands
         {
             if (Context.Users.Any(c => c.Username == request.Username))
             {
-                throw new EntityExistException();
+                throw new EntityExistException("This Username already exist.");
             }
 
             if (Context.Users.Any(c => c.Email == request.Email))
             {
-                throw new EntityExistException();
+                throw new EntityExistException("This Email already exist.");
             }
 
             Context.Users.Add(new Domain.User

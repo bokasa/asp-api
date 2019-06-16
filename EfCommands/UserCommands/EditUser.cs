@@ -28,7 +28,7 @@ namespace EfCommands.UserCommands
             {
                 if (Context.Users.Any(p => p.Username == request.Username))
                 {
-                    throw new EntityExistException();
+                    throw new EntityExistException("This Username  already exist.");
                 }
 
                 user.Username = request.Username;
@@ -38,7 +38,7 @@ namespace EfCommands.UserCommands
             {
                 if (Context.Users.Any(p => p.Password == request.Password))
                 {
-                    throw new EntityExistException();
+                    throw new EntityExistException("This Password  already exist.");
                 }
 
                 user.Password = request.Password;
@@ -48,7 +48,7 @@ namespace EfCommands.UserCommands
             {
                 if (Context.Users.Any(p => p.Email == request.Email))
                 {
-                    throw new EntityExistException();
+                    throw new EntityExistException("This Email  already exist.");
                 }
 
                 user.Email = request.Email;

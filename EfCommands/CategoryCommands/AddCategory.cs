@@ -20,7 +20,7 @@ namespace EfCommands.CategoryCommands
         {
             if (Context.Categories.Any(c => c.Name == request.Name))
             {
-                throw new EntityExistException();
+                throw new EntityExistException("This category name already exist.");
             }
             Context.Categories.Add(new Domain.Category
             {

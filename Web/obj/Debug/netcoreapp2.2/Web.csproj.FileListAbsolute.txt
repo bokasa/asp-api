@@ -46,3 +46,8 @@ C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Ra
 C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Details.g.cshtml.cs
 C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Create.g.cshtml.cs
 C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Category\Details.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Ad\Details.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Ad\Create.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Ad\Delete.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Ad\Index.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Ad\Edit.g.cshtml.cs

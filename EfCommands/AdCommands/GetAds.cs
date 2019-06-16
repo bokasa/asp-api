@@ -50,7 +50,9 @@ namespace EfCommands
                 Title = s.Title,
                 Body = s.Body,
                 Price = s.Price,
-                IsShipping = s.IsShipping
+                IsShipping = s.IsShipping,
+                CategoryId = s.Category.Id,
+                UserId = s.User.Id
             });
         }
     }

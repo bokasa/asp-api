@@ -37,11 +37,8 @@ namespace EfCommands
                 Body = ad.Body,
                 Price = ad.Price,
                 IsShipping = ad.IsShipping,
-                Category = new CategoryDTO
-                {
-                    Id = ad.Category.Id,
-                    Name = ad.Category.Name
-                }
+                CategoryId = ad.Category.Id,
+                UserId = ad.User.Id
             };
         }
     }

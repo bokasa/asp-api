@@ -53,6 +53,11 @@ namespace Web
             services.AddTransient<ICreateUserCommand, CreateUser>();
             services.AddTransient<IDeleteUserCommand, DeleteUser>();
 
+            services.AddTransient<IGetAdCommand, GetAd>();
+            services.AddTransient<IGetAdsCommand, GetAds>();
+            services.AddTransient<ICreateAdCommand, CreateAd>();
+            services.AddTransient<IDeleteAdCommand, DeleteAd>();
+            services.AddTransient<IEditAdCommand, EditAd>();
 
         }
 

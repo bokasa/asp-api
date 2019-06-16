@@ -6,5 +6,9 @@ namespace Application.Exceptions
 {
     public class EntityExistException : Exception
     {
+        public EntityExistException(string msg)
+        {
+
+        }
     }
 }

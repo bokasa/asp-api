@@ -13,7 +13,7 @@ namespace EfDataAccess.Config
         public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.Property(c => c.Name)
-                .HasMaxLength(50)
+                .HasMaxLength(40)
                 .IsRequired();
 
             builder.HasIndex(c => c.Name)

@@ -28,7 +28,7 @@ namespace EfCommands.CategoryCommands
             {
                 if (Context.Categories.Any(p => p.Name == request.Name))
                 {
-                    throw new EntityExistException();
+                    throw new EntityExistException("This category name already exist.");
                 }
 
                 category.Name = request.Name;
