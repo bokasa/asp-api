@@ -20,7 +20,7 @@ namespace EfCommands.CategoryCommands
         {
             if (Context.Categories.Any(c => c.Name == request.Name))
             {
-                throw new EntityNotFoundException();
+                throw new EntityExistException();
             }
             Context.Categories.Add(new Domain.Category
             {

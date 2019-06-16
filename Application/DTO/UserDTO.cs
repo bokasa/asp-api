@@ -9,6 +9,8 @@ namespace Application.DTO
         public int Id { get; set; } 
         public string Username { get; set; }
         public string Email { get; set; }
+        public string Password { get; set; }
+
         public IEnumerable<CommentDTO> Comments { get; set; }
         public IEnumerable<AdDTO> Ads { get; set; }
    

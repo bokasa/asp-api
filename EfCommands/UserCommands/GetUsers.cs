@@ -7,7 +7,7 @@ using Application.ICommands;
 using Application.Queries;
 using EfDataAccess;
 
-namespace EfCommands.AdCommands
+namespace EfCommands
 {
     public class GetUsers : BaseCommand, IGetUsersCommand
     {

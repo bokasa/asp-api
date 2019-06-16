@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.ICommands;
 using Application.ICommands.Category;
+using Application.ICommands.User;
+using EfCommands;
 using EfCommands.CategoryCommands;
+using EfCommands.UserCommands;
 using EfDataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,6 +44,16 @@ namespace Web
             services.AddTransient<IGetCategoriesCommand, GetCategories>();
             services.AddTransient<IGetCategoryCommand, GetCategory>();
             services.AddTransient<IAddCategoryCommand, AddCategory>();
+            services.AddTransient<IDeleteCategoryCommand, DeleteCategory>();
+            services.AddTransient<IEditCategoryCommand, EditCategory>();
+
+            services.AddTransient<IGetUserCommand, GetUser>();
+            services.AddTransient<IGetUsersCommand, GetUsers>();
+            services.AddTransient<IEditUserCommand, EditUser>();
+            services.AddTransient<ICreateUserCommand, CreateUser>();
+            services.AddTransient<IDeleteUserCommand, DeleteUser>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

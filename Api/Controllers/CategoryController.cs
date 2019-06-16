@@ -16,10 +16,10 @@ namespace Api.Controllers
     public class CategoryController : Controller
     {
         private readonly Context _context;
-        private IGetGetCommentsCommand _getCommand;
+        private IGetCategoriesCommand _getCommand;
         private IGetCategoryCommand _getOneCommand;
 
-        public CategoryController(Context context, IGetGetCommentsCommand getCategories, IGetCategoryCommand getOneCommand)
+        public CategoryController(Context context, IGetCategoriesCommand getCategories, IGetCategoryCommand getOneCommand)
         {
             _context = context;
             _getCommand = getCategories;

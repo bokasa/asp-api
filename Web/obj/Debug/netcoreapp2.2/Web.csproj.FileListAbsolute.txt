@@ -38,3 +38,11 @@ C:\Users\milos.ruzic\source\repos\asp-api-project\Web\bin\Debug\netcoreapp2.2\Ef
 C:\Users\milos.ruzic\source\repos\asp-api-project\Web\bin\Debug\netcoreapp2.2\Domain.pdb
 C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Category\Index.g.cshtml.cs
 C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Category\Create.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Category\Delete.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Category\Edit.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Index.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Edit.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Delete.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Details.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Create.g.cshtml.cs
+C:\Users\milos.ruzic\source\repos\asp-api-project\Web\obj\Debug\netcoreapp2.2\Razor\Views\Category\Details.g.cshtml.cs

@@ -13,15 +13,19 @@ namespace Web.Controllers
 {
     public class CategoryController : Controller
     {
-        private IGetCategoriesCommand _getCommand;
-        private IGetCategoryCommand _getOneCommand;
-        private IAddCategoryCommand _addCommand;
+        private readonly IGetCategoriesCommand _getCommand;
+        private readonly IGetCategoryCommand _getOneCommand;
+        private readonly IAddCategoryCommand _addCommand;
+        private readonly IDeleteCategoryCommand _deleteCategoryCommand;
+        private readonly IEditCategoryCommand _editCategoryCommand;
 
-        public CategoryController(IGetCategoriesCommand getCommand, IGetCategoryCommand getOneCommand, IAddCategoryCommand addCommand)
+        public CategoryController(IGetCategoriesCommand getCommand, IGetCategoryCommand getOneCommand, IAddCategoryCommand addCommand, IDeleteCategoryCommand deleteCategoryCommand, IEditCategoryCommand editCategoryCommand)
         {
             _getCommand = getCommand;
             _getOneCommand = getOneCommand;
             _addCommand = addCommand;
+            _deleteCategoryCommand = deleteCategoryCommand;
+            _editCategoryCommand = editCategoryCommand;
         }
 
         // GET: Category
@@ -87,22 +91,32 @@ namespace Web.Controllers
         // POST: Category/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, CategoryDTO category)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(category);
+            }
+
             try
             {
-                // TODO: Add update logic here
-
+                _editCategoryCommand.Execute(category);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (EntityExistException)
             {
-                return View();
+                TempData["error"] = "Category already exist!";
             }
+            catch (EntityNotFoundException)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View();
         }
 
         // GET: Category/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             return View();
         }
@@ -110,17 +124,20 @@ namespace Web.Controllers
         // POST: Category/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, CategoryDTO category)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                _deleteCategoryCommand.Execute(category);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (EntityNotFoundException)
             {
                 return View();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("index");
             }
         }
     }

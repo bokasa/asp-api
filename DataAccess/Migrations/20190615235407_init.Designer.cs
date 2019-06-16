@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EfDataAccess.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20190613235507_qwewqr")]
-    partial class qwewqr
+    [Migration("20190615235407_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<bool>("IsShipping");
 
@@ -62,7 +62,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Name");
 
@@ -81,11 +81,15 @@ namespace EfDataAccess.Migrations
 
                     b.Property<int>("AdId");
 
-                    b.Property<DateTime>("CreatedAt");
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<string>("Text");
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasMaxLength(1500);
 
                     b.Property<DateTime>("UpdatedAt");
 
@@ -110,7 +114,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Password");
 

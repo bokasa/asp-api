@@ -31,7 +31,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<bool>("IsShipping");
 
@@ -39,7 +39,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<string>("Title");
 
-                    b.Property<DateTime>("UpdatedAt");
+                    b.Property<DateTime?>("UpdatedAt");
 
                     b.Property<int>("UserId");
 
@@ -60,11 +60,11 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Name");
 
-                    b.Property<DateTime>("UpdatedAt");
+                    b.Property<DateTime?>("UpdatedAt");
 
                     b.HasKey("Id");
 
@@ -79,13 +79,17 @@ namespace EfDataAccess.Migrations
 
                     b.Property<int>("AdId");
 
-                    b.Property<DateTime>("CreatedAt");
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<string>("Text");
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasMaxLength(1500);
 
-                    b.Property<DateTime>("UpdatedAt");
+                    b.Property<DateTime?>("UpdatedAt");
 
                     b.Property<int>("UserId");
 
@@ -108,11 +112,11 @@ namespace EfDataAccess.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<DateTime>("IsDeleted");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Password");
 
-                    b.Property<DateTime>("UpdatedAt");
+                    b.Property<DateTime?>("UpdatedAt");
 
                     b.Property<string>("Username");
 
